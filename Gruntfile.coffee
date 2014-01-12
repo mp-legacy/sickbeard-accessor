@@ -2,7 +2,8 @@
 module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.registerTask('test', ['coffee:compile']);
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.registerTask('test', ['coffee',"shell:runTest"]);
 
   grunt.initConfig 
     coffee: 
@@ -27,6 +28,11 @@ module.exports = (grunt) ->
         src: ['*.coffee'],
         dest: 'lib/models',
         ext: '.js'
+    shell:
+      runTest:
+        options:
+          stdout: true
+        command: "coffee test/runner.coffee"
  
 
 
