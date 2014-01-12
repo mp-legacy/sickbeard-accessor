@@ -1,6 +1,6 @@
 {
   "name": "sickbeard-accessor",
-  "description": "A package to access some sickbeard with a serious backbone",
+  "description": "Access sickbeard data with some backbone collections & models",
   "author": "Max Presman <max@presman.ca>",
   "version": "0.0.1",
   "dependencies": {
@@ -21,6 +21,12 @@
     "coffee-script": "~1.6.3"
   },
   "scripts": {
-    "test": "coffee test/runner.coffee"
+    "test": "grunt test"
+  },
+  "main": "lib/main",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaxPresman/sickbeard-accessor.git"
   }
 }
