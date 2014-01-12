@@ -16,6 +16,6 @@
     "mocha": "~1.17.0",
     "grunt-contrib-coffee": "~0.8.0",
     "grunt-contrib-watch": "~0.5.3",
-    "nodegit": "~0.1.0"
+    "phantom": "~0.5.4"
   }
 }
