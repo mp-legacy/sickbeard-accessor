@@ -18,7 +18,7 @@ describe "#fetchAll", ->
 
   it "the returned collection contains one item", (done) ->
     @sbInstance.fetchAll (err,showsCollection) ->
-      assert.equal showsCollection.length, 2
+      assert.equal showsCollection.length, 1
       done()
 
 

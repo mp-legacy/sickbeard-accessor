@@ -32,6 +32,7 @@ module.exports = (grunt) ->
       runTest:
         options:
           stdout: true
+          stderr: true
         command: "coffee test/runner.coffee"
  
 

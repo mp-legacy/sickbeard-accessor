@@ -14,7 +14,7 @@ unitTestPath = path.resolve __dirname, "unit"
 
 sickbeardStarted = false
 startedTries = 0
-timeoutOnTries = 10
+timeoutOnTries = 30
 sickBeardProcess = undefined
 
 prepareTmp = (tmpPath, cb) ->
@@ -33,6 +33,10 @@ cloneSickBeard = (tmpPath,cb) ->
 
 spinSickBeard = (sb_path,cb) ->
   childProc = spawn("python",["#{sb_path}/SickBeard.py", "--nolaunch"])
+
+  childProc.stdout.on 'data',  (data) -> console.log data.toString 'utf8'
+  childProc.stderr.on 'data',  (data) -> console.log data.toString 'utf8'
+
   cb(childProc)
 
 
@@ -56,6 +60,7 @@ waitForBoot = (cb) ->
     runTests()
 
   heartbeatCall.on 'error', (e) ->
+    console.log e
     startedTries += 1
     setTimeout waitForBoot, 1000
 
