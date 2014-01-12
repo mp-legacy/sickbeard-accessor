@@ -1,0 +1,32 @@
+{
+  "name": "sickbeard-accessor",
+  "description": "Access sickbeard data with some backbone collections & models",
+  "author": "Max Presman <max@presman.ca>",
+  "version": "0.0.1",
+  "dependencies": {
+    "backbone": "1.1.0",
+    "underscore": "1.5.2",
+    "request": "~2.31.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "mocha": "~1.17.0",
+    "grunt-contrib-coffee": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "phantom": "~0.5.4",
+    "grunt-shell": "~0.6.1",
+    "coffee-script": "~1.6.3"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "main": "lib/main",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaxPresman/sickbeard-accessor.git"
+  }
+}
